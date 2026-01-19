@@ -1,0 +1,190 @@
+# Sistema de Gestão de PII - LGPD
+# Hackathon Participa DF 2026
+# .gitignore
+
+# =====================================================
+# Python
+# =====================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =====================================================
+# Ambientes Virtuais
+# =====================================================
+venv/
+venv_teste/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =====================================================
+# IDE / Editores
+# =====================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# =====================================================
+# Jupyter Notebook
+# =====================================================
+.ipynb_checkpoints
+
+# =====================================================
+# Streamlit
+# =====================================================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# =====================================================
+# Dados e Output (IMPORTANTE!)
+# =====================================================
+# Arquivos processados NÃO devem ir para repositório público
+# (podem conter dados pessoais mesmo mascarados)
+output/*.xlsx
+output/*.csv
+output/*.pdf
+!output/.gitkeep
+
+# Manifestações geradas
+manifestacoes_ouvidoria_*.xlsx
+!manifestacoes_ouvidoria_EXEMPLO.xlsx
+
+# Logs
+*.log
+logs/
+
+# =====================================================
+# Modelos de NLP
+# =====================================================
+# Modelo spaCy é grande (800MB+), baixar via pip
+*.bin
+*.pkl
+*.pickle
+
+# =====================================================
+# Dados Sensíveis (NUNCA committar!)
+# =====================================================
+*_REAL.xlsx
+*_PRODUCAO.xlsx
+*_SENSIVEL.*
+dados_reais/
+backup_producao/
+
+# Credentials
+*.key
+*.pem
+*.crt
+credentials.json
+secrets.yaml
+
+# =====================================================
+# Sistema Operacional
+# =====================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# =====================================================
+# Temporários
+# =====================================================
+*.tmp
+*.temp
+temp/
+tmp/
+cache/
+
+# =====================================================
+# Testes
+# =====================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# =====================================================
+# Documentação Compilada
+# =====================================================
+docs/_build/
+site/
+
+# =====================================================
+# Configurações Locais
+# =====================================================
+.env
+.env.local
+config_local.yaml
+
+# =====================================================
+# Backup
+# =====================================================
+*.bak
+*.backup
+backup/
+
+# =====================================================
+# Arquivos Grandes
+# =====================================================
+# Arquivos > 100MB não devem ir pro Git
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# =====================================================
+# EXCEÇÕES (arquivos que DEVEM ser commitados)
+# =====================================================
+# Mesmo que sejam .xlsx, esses são exemplos/documentação
+!data/data.json
+!docs/**/*.xlsx
+!README.md
+!requirements.txt
+
+# =====================================================
+# Notas para Equipe
+# =====================================================
+#
+# ANTES DE COMMITTAR:
+# 1. Verificar se não há dados reais: git status
+# 2. Revisar diff: git diff
+# 3. Nunca adicionar output/: git add output/  (ERRADO!)
+# 4. Commit mensagens descritivas
+#
+# DADOS DE TESTE:
+# - Use apenas dados fictícios do data.json
+# - Nunca use manifestações reais do GDF
+# - Se precisar testar com volume, gere via gerar_manifestacoes.py
+#
+# =====================================================
